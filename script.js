@@ -138,7 +138,7 @@ const EXTERNAL_LINKS = [
 
 {
     name: "Website Ban X",
-    url: "https://example.com/",
+    url: "https://link-sites-report-v1.vercel.app/",
     description: "Site web principal.",
     icon: "🪩"
 },
