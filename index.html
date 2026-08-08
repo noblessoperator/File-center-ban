@@ -1,0 +1,810 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+<meta
+    name="description"
+    content="WA Report File Center — plateforme de téléchargement et de ressources.">
+
+<meta
+    name="theme-color"
+    content="#20d6b5">
+
+<meta
+    name="robots"
+    content="index, follow">
+
+<title>WA REPORT — FILE CENTER V2</title>
+
+<!-- =====================================================
+     FONTS
+====================================================== -->
+
+<link
+    rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+<link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap"
+    rel="stylesheet">
+
+<!-- =====================================================
+     CSS
+====================================================== -->
+
+<link
+    rel="stylesheet"
+    href="css/style.css">
+
+</head><body><div class="site-container"><!-- =====================================================
+     TOPBAR
+====================================================== -->
+
+<header class="topbar">
+
+    <div class="brand">
+
+        <div class="brandmark">
+
+            <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true">
+
+                <path
+                    d="M12 3l7 3v5c0 4.6-2.8 8.2-7 10-4.2-1.8-7-5.4-7-10V6l7-3z"/>
+
+                <path
+                    d="m9 12 2 2 4-5"/>
+
+            </svg>
+
+        </div>
+
+
+        <div class="brand-text">
+
+            <div class="brand-name">
+                WA REPORT
+            </div>
+
+            <div class="brand-sub">
+                FILE CENTER V2
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="status-badge">
+
+        <span class="status-dot"></span>
+
+        ONLINE
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     NAVIGATION
+====================================================== -->
+
+<nav
+    class="main-nav"
+    aria-label="Navigation principale">
+
+    <button
+        class="nav-button active"
+        type="button"
+        data-page="files">
+
+        <span class="nav-icon">▣</span>
+
+        <span>FILES</span>
+
+    </button>
+
+
+    <button
+        class="nav-button"
+        type="button"
+        data-page="stats">
+
+        <span class="nav-icon">◈</span>
+
+        <span>STATS</span>
+
+    </button>
+
+
+    <button
+        class="nav-button"
+        type="button"
+        data-page="about">
+
+        <span class="nav-icon">ⓘ</span>
+
+        <span>ABOUT</span>
+
+    </button>
+
+
+    <button
+        class="nav-button"
+        type="button"
+        data-page="links">
+
+        <span class="nav-icon">↗</span>
+
+        <span>LINKS</span>
+
+    </button>
+
+</nav>
+
+
+<!-- =====================================================
+     MAIN
+====================================================== -->
+
+<main>
+
+
+    <!-- =================================================
+         FILES PAGE
+    ================================================== -->
+
+    <section
+        id="files"
+        class="page active"
+        aria-labelledby="files-title">
+
+        <div class="hero-card">
+
+            <div class="hero-content">
+
+                <div class="hero-label">
+                    SECURE FILE CENTER
+                </div>
+
+                <h1 id="files-title">
+                    Download Center
+                </h1>
+
+                <p>
+                    Retrouvez ici les fichiers disponibles
+                    au téléchargement.
+                </p>
+
+            </div>
+
+
+            <div class="hero-status">
+
+                <span class="hero-status-dot"></span>
+
+                SYSTEM READY
+
+            </div>
+
+        </div>
+
+
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+            <span class="search-icon">
+                ⌕
+            </span>
+
+            <input
+                id="search"
+                class="search"
+                type="search"
+                placeholder="Rechercher un fichier..."
+                autocomplete="off"
+                aria-label="Rechercher un fichier">
+
+            <button
+                id="clearSearch"
+                class="clear-search"
+                type="button"
+                aria-label="Effacer la recherche">
+
+                ×
+
+            </button>
+
+        </div>
+
+
+        <!-- FILE COUNT -->
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-kicker">
+                    AVAILABLE FILES
+                </span>
+
+                <h2>
+                    Fichiers disponibles
+                </h2>
+
+            </div>
+
+
+            <div
+                id="fileCount"
+                class="count-badge">
+
+                0 FILES
+
+            </div>
+
+        </div>
+
+
+        <!-- FILE LIST -->
+
+        <div
+            id="fileList"
+            class="file-list">
+
+            <!-- Généré par script.js -->
+
+        </div>
+
+
+        <!-- EMPTY -->
+
+        <div
+            id="emptyState"
+            class="empty-state hidden">
+
+            <div class="empty-icon">
+                ⌕
+            </div>
+
+            <h3>
+                Aucun fichier trouvé
+            </h3>
+
+            <p>
+                Essayez avec un autre mot-clé.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         STATS PAGE
+    ================================================== -->
+
+    <section
+        id="stats"
+        class="page"
+        aria-labelledby="stats-title">
+
+        <div class="page-header">
+
+            <div class="page-header-icon">
+                ◈
+            </div>
+
+            <div>
+
+                <span class="section-kicker">
+                    SYSTEM DATA
+                </span>
+
+                <h1 id="stats-title">
+                    Statistics
+                </h1>
+
+                <p>
+                    Statistiques générées automatiquement.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="stats-grid">
+
+
+            <article class="stat-card">
+
+                <div class="stat-icon">
+                    ▣
+                </div>
+
+                <div
+                    id="totalFiles"
+                    class="stat-number">
+
+                    0
+
+                </div>
+
+                <div class="stat-label">
+                    TOTAL FILES
+                </div>
+
+                <div class="stat-description">
+                    Nombre total de fichiers configurés.
+                </div>
+
+            </article>
+
+
+            <article class="stat-card green">
+
+                <div class="stat-icon">
+                    ✓
+                </div>
+
+                <div
+                    id="availableFiles"
+                    class="stat-number">
+
+                    0
+
+                </div>
+
+                <div class="stat-label">
+                    AVAILABLE
+                </div>
+
+                <div class="stat-description">
+                    Fichiers actuellement disponibles.
+                </div>
+
+            </article>
+
+
+            <article class="stat-card yellow">
+
+                <div class="stat-icon">
+                    ↓
+                </div>
+
+                <div
+                    id="totalDownloads"
+                    class="stat-number">
+
+                    0
+
+                </div>
+
+                <div class="stat-label">
+                    DOWNLOADS
+                </div>
+
+                <div class="stat-description">
+                    Téléchargements enregistrés localement.
+                </div>
+
+            </article>
+
+
+            <article class="stat-card blue">
+
+                <div class="stat-icon">
+                    ↗
+                </div>
+
+                <div
+                    id="totalLinks"
+                    class="stat-number">
+
+                    5
+
+                </div>
+
+                <div class="stat-label">
+                    EXTERNAL LINKS
+                </div>
+
+                <div class="stat-description">
+                    Ressources externes configurées.
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <!-- SYSTEM STATUS -->
+
+        <div class="content-card">
+
+            <div class="card-title">
+
+                <span class="card-title-icon">
+                    ●
+                </span>
+
+                System Status
+
+            </div>
+
+
+            <div class="status-list">
+
+                <div class="status-row">
+
+                    <span>
+                        Website
+                    </span>
+
+                    <strong class="online-text">
+                        ONLINE
+                    </strong>
+
+                </div>
+
+
+                <div class="status-row">
+
+                    <span>
+                        File system
+                    </span>
+
+                    <strong class="online-text">
+                        READY
+                    </strong>
+
+                </div>
+
+
+                <div class="status-row">
+
+                    <span>
+                        JavaScript
+                    </span>
+
+                    <strong class="online-text">
+                        ACTIVE
+                    </strong>
+
+                </div>
+
+
+                <div class="status-row">
+
+                    <span>
+                        Responsive UI
+                    </span>
+
+                    <strong class="online-text">
+                        ENABLED
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         ABOUT PAGE
+    ================================================== -->
+
+    <section
+        id="about"
+        class="page"
+        aria-labelledby="about-title">
+
+        <div class="page-header">
+
+            <div class="page-header-icon">
+                ⓘ
+            </div>
+
+            <div>
+
+                <span class="section-kicker">
+                    INFORMATION
+                </span>
+
+                <h1 id="about-title">
+                    About
+                </h1>
+
+                <p>
+                    Informations sur cette plateforme.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="content-card">
+
+            <div class="card-title">
+
+                <span class="card-title-icon">
+                    ◆
+                </span>
+
+                WA Report File Center
+
+            </div>
+
+
+            <p class="content-text">
+
+                WA Report File Center est une interface
+                web légère destinée à organiser et présenter
+                des fichiers ainsi que des ressources
+                externes dans une interface simple,
+                moderne et responsive.
+
+            </p>
+
+
+            <p class="content-text">
+
+                Le site utilise uniquement HTML, CSS et
+                JavaScript côté client. Aucun framework
+                n'est nécessaire pour son fonctionnement.
+
+            </p>
+
+        </div>
+
+
+        <div class="notice">
+
+            <div class="notice-icon">
+                !
+            </div>
+
+            <div>
+
+                <strong>
+                    Information
+                </strong>
+
+                <p>
+                    Les fichiers et les liens présentés
+                    sont définis dans le fichier
+                    <code>js/script.js</code>.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="info-grid">
+
+            <div class="info-item">
+
+                <span class="info-label">
+                    VERSION
+                </span>
+
+                <strong>
+                    2.0.0
+                </strong>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <span class="info-label">
+                    YEAR
+                </span>
+
+                <strong>
+                    2026
+                </strong>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <span class="info-label">
+                    ENGINE
+                </span>
+
+                <strong>
+                    VANILLA JS
+                </strong>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <span class="info-label">
+                    HOSTING
+                </span>
+
+                <strong>
+                    VERCEL
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         LINKS PAGE
+    ================================================== -->
+
+    <section
+        id="links"
+        class="page"
+        aria-labelledby="links-title">
+
+        <div class="page-header">
+
+            <div class="page-header-icon">
+                ↗
+            </div>
+
+            <div>
+
+                <span class="section-kicker">
+                    EXTERNAL RESOURCES
+                </span>
+
+                <h1 id="links-title">
+                    Links
+                </h1>
+
+                <p>
+                    Cinq ressources externes accessibles
+                    depuis cette plateforme.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="linksList"
+            class="links-list">
+
+            <!-- Généré par script.js -->
+
+        </div>
+
+
+        <div class="content-card small-card">
+
+            <div class="card-title">
+
+                <span class="card-title-icon">
+                    ↗
+                </span>
+
+                External Resources
+
+            </div>
+
+            <p class="content-text">
+
+                Les liens externes s'ouvrent dans un
+                nouvel onglet afin de conserver cette
+                plateforme ouverte.
+
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer class="footer">
+
+    <div class="footer-brand">
+        WA REPORT FILE CENTER
+    </div>
+
+
+    <div class="footer-links">
+
+        <button
+            type="button"
+            data-page="files">
+
+            Files
+
+        </button>
+
+        <button
+            type="button"
+            data-page="stats">
+
+            Stats
+
+        </button>
+
+        <button
+            type="button"
+            data-page="about">
+
+            About
+
+        </button>
+
+        <button
+            type="button"
+            data-page="links">
+
+            Links
+
+        </button>
+
+    </div>
+
+
+    <div class="footer-line"></div>
+
+
+    <div class="footer-copy">
+
+        © 2026 NOBLESS LLC — ALL RIGHTS RESERVED
+
+    </div>
+
+
+    <div class="footer-version">
+
+        MATRIX CENTER V2.0
+
+    </div>
+
+</footer>
+
+</div><!-- =========================================================
+     TOAST
+========================================================== --><div
+    id="toast"
+    class="toast"
+    role="status"
+    aria-live="polite"></div><!-- =========================================================
+     JAVASCRIPT
+========================================================== --><script
+    src="js/script.js"
+    defer>
+</script></body></html>
